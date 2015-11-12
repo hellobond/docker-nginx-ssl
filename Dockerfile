@@ -1,6 +1,6 @@
 FROM nginx:1.9
 
-MAINTAINER Anthony O'Brien <asobrien@gmail.com>
+MAINTAINER Daniel Gladstone <daniel@bond.co>
 
 COPY sysconfig/ /
 
