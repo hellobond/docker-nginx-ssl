@@ -1,20 +1,20 @@
 server {
     listen         80;
-    server_name    _;
-    return         301 https://$host$request_uri$is_args$args;
+    server_name    marvin.hellobond.io;
+    return         301 https://marvin.hellobond.io$request_uri$is_args$args;
 }
 
 
 server {
     listen 443 ssl;
 
-    server_name _;
+    server_name marvin.hellobond.io;
 
     ssl_certificate /etc/nginx/ssl/server.crt;
     ssl_certificate_key /etc/nginx/ssl/server.key;
 
     location / {
-      proxy_pass http://gunicorn:8000/;
+      proxy_pass http://marvin:8000/;
       proxy_redirect     off;
 
       proxy_set_header   Host             $host;
