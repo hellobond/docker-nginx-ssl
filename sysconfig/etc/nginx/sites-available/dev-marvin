@@ -7,8 +7,7 @@ server {
 
 server {
     listen 443 ssl;
-    add_header 'Access-Control-Allow-Origin' 'http://marvin-local:5000';
-    add_header 'Access-Control-Allow-Origin' 'https://writing-labs.hellobond.io';
+    add_header 'Access-Control-Allow-Origin' 'http://marvin-local:5000 https://writing-labs.hellobond.io';
     server_name dev-marvin.hellobond.io;
 
     ssl_certificate /etc/nginx/ssl/server.crt;
